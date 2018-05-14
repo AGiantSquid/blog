@@ -61,4 +61,6 @@ ssh-keygen -t rsa
 # add ssh to git
 # clone any repos
 
+# get dbus-x11 so sublime files open in same instance of sublime
+apt get-install dbus dbus-x11
 ```
