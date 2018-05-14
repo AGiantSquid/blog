@@ -59,6 +59,7 @@ sudo apt-get install git-core
 # generate an ssh key
 ssh-keygen -t rsa
 # add ssh to git
+
 # clone any repos
 
 # add Sublime Text https://www.sublimetext.com/docs/3/linux_repositories.html
@@ -68,6 +69,13 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
+# add Sublime settings
+cd ~/AddData/Roaming/Sublime\ Text\ 3/Packages/User/ 
+git init
+git remote add origin git@github.com:AGiantSquid/sublime_settings.git
+git fetch
+git reset --hard origin/master
+
 # get dbus-x11 so sublime files open in same instance of sublime
-apt get-install dbus dbus-x11
+sudo apt get-install dbus dbus-x11
 ```
