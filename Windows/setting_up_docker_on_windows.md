@@ -76,6 +76,8 @@ git remote add origin git@github.com:AGiantSquid/sublime_settings.git
 git fetch
 git reset --hard origin/master
 
+
+
 # get dbus-x11 so sublime files open in same instance of sublime
-sudo apt get-install dbus dbus-x11
+sudo apt-get install dbus dbus-x11
 ```

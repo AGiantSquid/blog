@@ -1,0 +1,10 @@
+## Use graphical programs
+https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/
+
+Download [xming](https://sourceforge.net/projects/xming/)
+
+Get the Debian dependencies needed to run x11.
+```
+sudo apt-get install libcairo2-dev
+apt-get install libgtk2.0-dev
+```
