@@ -87,7 +87,7 @@ Add the following to `.gitconfig`
 ```
 [user]
 	name = AGiantSquid
-	email = ashley.e.shultz@gmail.com
+	email = ashley@greenkeytech.com
 [diff]
     tool = meld
 [difftool]
@@ -98,5 +98,32 @@ Add the following to `.gitconfig`
     tool = meld
 [mergetool "meld"]
     cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+    keepBackup = false
+    prompt = false
+[core]
+	filemode = false
+	autocrlf = false
+
 ```
 
+And this for windows home directory `.gitconfig`
+```
+[user]
+	email = ashley@greenkeytech.com
+	name = AGiantSquid
+[diff]
+	guitool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = \"C:/Program Files (x86)/Meld/Meld.exe\" "$LOCAL" "$REMOTE"
+[merge]
+	tool = meld
+[mergetool "meld"]
+    cmd = \"C:/Program Files (x86)/Meld/Meld.exe\" "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+    keepBackup = false
+    prompt = false
+[core]
+	filemode = false
+	autocrlf = false
+```
