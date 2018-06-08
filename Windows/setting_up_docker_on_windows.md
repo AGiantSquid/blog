@@ -76,8 +76,27 @@ git remote add origin git@github.com:AGiantSquid/sublime_settings.git
 git fetch
 git reset --hard origin/master
 
-
+# add meld
+sudo apt-get install meld -y
 
 # get dbus-x11 so sublime files open in same instance of sublime
 sudo apt-get install dbus dbus-x11
 ```
+
+Add the following to `.gitconfig`
+```
+[user]
+	name = AGiantSquid
+	email = ashley.e.shultz@gmail.com
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+```
+

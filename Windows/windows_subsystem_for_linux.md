@@ -8,3 +8,8 @@ Get the Debian dependencies needed to run x11.
 sudo apt-get install libcairo2-dev
 apt-get install libgtk2.0-dev
 ```
+
+
+alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
+echo ".myconfig" >> .gitignore
+git clone --bare https://github.com/AGiantSquid/myconfig.git $HOME/.myconfig
