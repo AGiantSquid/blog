@@ -40,7 +40,7 @@ root = /
 options = "metadata"
 ```
 We need to set `root = /` because this will make your drives mounted at `/c`instead of `/mnt/c`.
-Once you make those changes, sign out and sign back in to Windows to ensure the changes take effect. 
+Once you make those changes, sign out and sign back in to Windows to ensure the changes take effect.
 
 https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
 
@@ -55,12 +55,13 @@ All the debian things
 ```bash
 sudo apt-get update
 # install git
-sudo apt-get install git-core
+sudo apt-get install git-core -y
 # generate an ssh key
 ssh-keygen -t rsa
 # add ssh to git
 
 # clone any repos
+# 1st should be .myconfig project for .bashrc etc.
 
 # add Sublime Text https://www.sublimetext.com/docs/3/linux_repositories.html
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -70,7 +71,7 @@ sudo apt-get update
 sudo apt-get install sublime-text
 
 # add Sublime settings
-cd ~/AddData/Roaming/Sublime\ Text\ 3/Packages/User/ 
+cd ~/AddData/Roaming/Sublime\ Text\ 3/Packages/User/
 git init
 git remote add origin git@github.com:AGiantSquid/sublime_settings.git
 git fetch
@@ -80,7 +81,7 @@ git reset --hard origin/master
 sudo apt-get install meld -y
 
 # get dbus-x11 so sublime files open in same instance of sublime
-sudo apt-get install dbus dbus-x11
+sudo apt-get install dbus dbus-x11 -y
 ```
 
 Add the following to `.gitconfig`
