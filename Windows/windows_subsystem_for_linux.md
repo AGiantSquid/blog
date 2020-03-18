@@ -23,4 +23,3 @@ https://conemu.github.io/
 - create a new task by hitting the plus button
 - call it `{bash::debian}`
 - Under the commands section, add `%windir%\system32\bash.exe ~ -cur_console:p`
-
