@@ -145,10 +145,13 @@ ssh [name]
 (should work without password)
 
 # add startup rule to start ssh on laptop
-use `task scheduler`
-command: `wsl`
-args: `-u root service ssh start`
+
+use `task scheduler` -> "Create Basic Task"
+name: "ssh"
 when: login
+script: `wsl`
+args: `-u root service ssh start`
+
 
 # remove password login on laptop
 ```shell
