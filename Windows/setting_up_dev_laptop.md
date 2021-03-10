@@ -114,17 +114,25 @@ Type a name for the rule. (WSL)
 Click Finish.
 ```
 
-# get local uri
+# get local uri for dev machine wsl
 ```shell
 ip a
 ```
 look for `wifi0` if on wifi, or `eth0` if using a wired connection (usually something like `192.168.1.xxx`)
 
-# add keys to new server from other computer
+# add keys to dev machine from other computer
 ```shell
 ssh-copy-id -i ~/.ssh/id_rsa.pub [username]@192.168.1.xxx -p 2222
 ```
 (you'll have to type password)
+
+# add keys to dev machine from windows machine for VSCode
+
+Open Windows Powershell
+
+```
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh [username]@192.168.1.xxx -p 2222 "cat >> .ssh/authorized_keys"
+```
 
 # add ssh config
 ```shell
