@@ -82,48 +82,37 @@ PasswordAuthentication yes
 
 # open port 2222 in windows
 ```
-Right-click the Start button.
-Click Search.
+Click Start
 Type Windows Firewall.
 
-Click Search. Type Windows Firewall.
 Click Windows Firewall.
 Click Advanced settings.
-
-Click Windows Firewall. Click Advanced settings.
-Click Inbound Rules in the left frame of the window.
-Click New Rule… in the right frame of the window.
 
 Click Inbound Rules. Click New Rule.
 Click Port.
 Click Next.
 
-Click Port. Click Next.
 Click either TCP or UDP.
 Click Specific local ports.
 
-Click either TCP or UDP. Click Specific local ports.
-Type a port number. (In this case, we will open port 1707.)
+Type a port number. (In this case, we will open port 2222.)
 Click Next.
 
-Type a port number. Click Next.
-Click Allow the connection.
+Click Allow the connection. 
 Click Next.
 
-Click Allow the connection. Click Next.
-Click any network types you'd like to allow the connection over.
+Click any network types you'd like to allow the connection over. (Domain, Private)
 Click Next.
 
-Click any network types. Click Next.
-Type a name for the rule.
+Type a name for the rule. (WSL)
 Click Finish.
 ```
 
 # get local uri
 ```shell
-ifconfig
+ip a
 ```
-look for `wifi0` (usually something like `192.168.1.xxx`)
+look for `wifi0` if on wifi, or `eth0` if using a wired connection (usually something like `192.168.1.xxx`)
 
 # add keys to new server from other computer
 ```shell
