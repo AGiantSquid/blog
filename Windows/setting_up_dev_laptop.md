@@ -2,7 +2,7 @@
 # install debain from store
 # update linux os
 ```shell
-apt-get install update
+sudo apt-get update
 ```
 
 # Create and modify the new WSL configuration file to prevent `/mnt` directory
@@ -38,6 +38,11 @@ cd
 chmod 700 .
 ```
 
+# install needed programs
+```
+sudo apt-get install openssh-server -y
+```
+
 # generate ssh keys
 ```shell
 ssh-keygen
@@ -46,11 +51,15 @@ ssh-keygen
 # make sure .ssh file and contents have correct permissions
 ```
 chmod 700 ~/.ssh
+chmod 600 ~/.ssh/id_rsa
+chmod 644 ~/.ssh/id_rsa.pub
+```
+
+# later, update these files too: 
+```shell
 chmod 644 ~/.ssh/authorized_keys
 chmod 644 ~/.ssh/known_hosts
 chmod 644 ~/.ssh/config
-chmod 600 ~/.ssh/id_rsa
-chmod 644 ~/.ssh/id_rsa.pub
 ```
 
 # add new ssh keys to github
