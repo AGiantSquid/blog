@@ -80,6 +80,12 @@ PubkeyAuthentication yes
 PasswordAuthentication yes
 ```
 
+# start ssh server
+
+```shell
+sudo service ssh start
+```
+
 # open port 2222 in windows
 ```
 Click Start
