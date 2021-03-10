@@ -4,6 +4,18 @@
 ```shell
 apt-get install update
 ```
+
+# Create and modify the new WSL configuration file to prevent `/mnt` directory
+```shell
+sudo nano /etc/wsl.conf
+```
+Add the following:
+```
+[automount]
+root = /
+options = "metadata"
+```
+
 # change linux home dir to /c/Users/[username]
 ```shell
 sudo nano /etc/passwd
