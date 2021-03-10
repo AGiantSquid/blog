@@ -98,7 +98,7 @@ Click Inbound Rules. Click New Rule.
 Click Port.
 Click Next.
 
-Click either TCP or UDP.
+Click TCP.
 Click Specific local ports.
 
 Type a port number. (In this case, we will open port 2222.)
