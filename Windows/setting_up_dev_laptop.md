@@ -16,6 +16,8 @@ root = /
 options = "metadata"
 ```
 
+Sign out and in again (do not just lock the screen, actually log out).
+
 # change linux home dir to /c/Users/[username]
 ```shell
 sudo nano /etc/passwd
