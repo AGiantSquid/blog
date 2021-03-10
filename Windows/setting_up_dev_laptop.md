@@ -28,7 +28,7 @@ change
 ```
 to
 ```
-[username]:x:1000:1000:,,,:/c/users/[username]:/bin/bash
+[username]:x:1000:1000:,,,:/c/Users/[username]:/bin/bash
 ```
 Then restart wsl.
 
