@@ -3,9 +3,11 @@
   1. Add vimium
 1. Download Firefox
 1. Show Hidden Files
-2. ```
-3. Open File Explorer from the taskbar. Select View > Options > Change folder and search options. Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.
-4. ```
+  ```
+  Open File Explorer from the taskbar. 
+  Select View > Options > Change folder and search options. 
+  Select the View tab and, in Advanced settings, select Show hidden files, folders,  and drives and OK.
+  ```
 5. Download SublimeText
 6. Register SublimeText
 7. Install Package Control
