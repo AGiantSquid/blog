@@ -2,7 +2,7 @@
 # install debain from store
 # update linux os
 ```shell
-apt-get install update to debian
+apt-get install update
 ```
 # change linux home dir to /c/Users/[username]
 ```shell
