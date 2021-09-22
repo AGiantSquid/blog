@@ -121,6 +121,10 @@ ip a
 ```
 look for `wifi0` if on wifi, or `eth0` if using a wired connection (usually something like `192.168.1.xxx`)
 
+```shell
+ip addr show dev eth0 | grep "inet " | awk '{ print $2 }' 
+```
+
 # add keys to dev machine from other computer
 ```shell
 ssh-copy-id -i ~/.ssh/id_rsa.pub [username]@192.168.1.xxx -p 2222
