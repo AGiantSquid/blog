@@ -81,6 +81,10 @@ chmod 644 ~/.ssh/config
 
 https://github.com/AGiantSquid/myconfig/tree/master/.myconfig
 
+# install python 
+
+https://github.com/AGiantSquid/blog/blob/master/Windows/setup_python.md
+
 # setup ssh to run on port 2222
 Port 22 is taken by Windows
 ```shell
