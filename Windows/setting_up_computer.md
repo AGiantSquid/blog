@@ -8,13 +8,11 @@
   Select View > Options > Change folder and search options. 
   Select the View tab and, in Advanced settings, select Show hidden files, folders,  and drives and OK.
   ```
-5. Download SublimeText
-6. Register SublimeText
-7. Install Package Control
-8. Download Git For Windows
-9. Add git username and email
-10. Download ConEmu
-11. Enable windows subsystem for linux; Open Powershell as Administrator:
+1. Install VSCode
+1. Download Git For Windows
+1. Add git username and email
+1. Download Terminal
+1. Enable windows subsystem for linux; Open Powershell as Administrator:
 
         Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 1. Restart Computer
