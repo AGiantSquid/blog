@@ -1,5 +1,15 @@
+# install VSCode
+
+# install useful programs
+    - vlc
+    - obs studio
+
 # install wsl
-# install debain from store
+
+Open powershell with admin priveledges and run:
+
+`wsl --install -d debian`
+
 # update linux os
 ```shell
 sudo apt-get update
@@ -19,6 +29,8 @@ options = "metadata"
 Sign out and in again (do not just lock the screen, actually log out).
 
 # change linux home dir to /c/Users/[username]
+NOTE: ONLY IF YOU WANT TO SHARE DISC BETWEEN WINDOWS AND LINUX
+
 ```shell
 sudo nano /etc/passwd
 ```
@@ -41,7 +53,7 @@ chmod 700 .
 # install needed programs
 ```
 sudo apt-get install openssh-server -y
-sudo apt-get install git -y
+sudo apt-get install git-all -y
 ```
 
 # generate ssh keys
@@ -65,7 +77,10 @@ chmod 644 ~/.ssh/config
 
 # add new ssh keys to github
 
-# install dot files
+# install dotfiles config
+
+https://github.com/AGiantSquid/myconfig/tree/master/.myconfig
+
 # setup ssh to run on port 2222
 Port 22 is taken by Windows
 ```shell
