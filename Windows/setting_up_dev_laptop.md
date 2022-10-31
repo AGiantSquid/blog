@@ -1,5 +1,8 @@
 # install VSCode
-
+    - install extensions:
+        - python
+        - remote development
+        
 # install useful programs
     - vlc
     - obs studio
