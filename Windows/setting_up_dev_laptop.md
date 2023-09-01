@@ -7,7 +7,7 @@
     - vlc
     - obs studio
 
-# install wsl
+# install wsl2
 
 Open powershell with admin priveledges and run:
 
@@ -30,22 +30,6 @@ options = "metadata"
 ```
 
 Sign out and in again (do not just lock the screen, actually log out).
-
-# change linux home dir to /c/Users/[username]
-NOTE: ONLY IF YOU WANT TO SHARE DISC BETWEEN WINDOWS AND LINUX
-
-```shell
-sudo nano /etc/passwd
-```
-change
-```
-[username]:x:1000:1000:,,,:/home/[username]:/bin/bash
-```
-to
-```
-[username]:x:1000:1000:,,,:/c/Users/[username]:/bin/bash
-```
-Then restart wsl.
 
 # change home dir permission to 700 (or ssh won't work)
 ```shell
@@ -88,6 +72,8 @@ https://github.com/AGiantSquid/myconfig/tree/master/.myconfig
 
 https://github.com/AGiantSquid/blog/blob/master/Windows/setup_python.md
 
+![image](https://github.com/AGiantSquid/blog/assets/26531374/20e78e0f-bf35-48e7-899f-973881d01daa)
+
 # setup ssh to run on port 2222
 Port 22 is taken by Windows
 ```shell
@@ -98,6 +84,7 @@ change `#Port 22` to `Port 2222`
 make sure:
 ```
 PermitRootLogin no
+ListenAddress 0.0.0.0
 AllowUsers [username]
 PubkeyAuthentication yes
 PasswordAuthentication yes
@@ -137,15 +124,34 @@ Type a name for the rule. (WSL)
 Click Finish.
 ```
 
-# get local uri for dev machine wsl
-```shell
-ip a
-```
-look for `wifi0` if on wifi, or `eth0` if using a wired connection (usually something like `192.168.1.xxx`)
+# create script in windows 
 
-```shell
-ip addr show dev eth0 | grep "inet " | awk '{ print $2 }' 
+sshd.bat
 ```
+@echo off
+setlocal
+
+C:\Windows\System32\bash.exe -c "sudo /usr/sbin/service ssh start"
+
+netsh interface portproxy delete v4tov4 listenport=2222 listenaddress=0.0.0.0 protocol=tcp
+
+for /f %%i in ('wsl hostname -I') do set IP=%%i
+netsh interface portproxy add v4tov4 listenport=2222 listenaddress=0.0.0.0 connectport=2222 connectaddress=%IP%
+
+endlocal
+```
+
+# run the script
+
+`.\sshd.bat`
+
+# get ipv4 address of windows server 
+
+Click internet settings. Get IPv4 address (probably 192.168.x.xx)
+
+# verify ssh works
+
+`ssh 192.168.x.xx -p 2222`
 
 # add keys to dev machine from other computer
 ```shell
