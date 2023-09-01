@@ -149,6 +149,11 @@ endlocal
 
 Click internet settings. Get IPv4 address (probably 192.168.x.xx)
 
+# make sure network is set to be discoverable
+
+![image](https://github.com/AGiantSquid/blog/assets/26531374/02d9c3f3-7356-4b9d-9648-b552d598a0f2)
+
+
 # verify ssh works
 
 `ssh 192.168.x.xx -p 2222`
