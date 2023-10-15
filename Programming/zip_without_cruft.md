@@ -15,5 +15,5 @@ zip \
     "*/.terraform/*" \
     "*/.git/*" \
     "*/_build/*" \
-    "*/artifacts/*" \
+    "*/artifacts/*"
 ```    
