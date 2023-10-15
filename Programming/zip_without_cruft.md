@@ -1,3 +1,4 @@
+```
 zip \
   -r [destination].zip [source]/ \
   -x \
@@ -15,4 +16,4 @@ zip \
     "*/.git/*" \
     "*/_build/*" \
     "*/artifacts/*" \
-    
+```    
