@@ -206,3 +206,24 @@ sudo nano /etc/ssh/sshd_config
 ```
 PasswordAuthentication no
 ```
+
+
+# Mac
+
+## Install bash
+```
+brew install bash
+/opt/homebrew/bin/bash --version
+sudo sh -c 'echo /opt/homebrew/bin/bash >> /etc/shells'
+chsh -s /opt/homebrew/bin/bash
+```
+Restart terminal
+```
+echo $BASH_VERSION
+```
+Make bash default for root also
+```
+sudo chsh -s /usr/local/bin/bash
+```
+
+
