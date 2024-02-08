@@ -225,5 +225,8 @@ Make bash default for root also
 ```
 sudo chsh -s /usr/local/bin/bash
 ```
-
+## add git completions
+```
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+```
 
