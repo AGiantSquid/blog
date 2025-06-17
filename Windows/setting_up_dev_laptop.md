@@ -230,3 +230,5 @@ sudo chsh -s /usr/local/bin/bash
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 ```
 
+## install rectangle
+Enable "Launch on login" from the user settings
