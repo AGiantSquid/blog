@@ -237,3 +237,11 @@ https://brew.sh/
 
 ## install rectangle
 Enable "Launch on login" from the user settings
+
+Make quadrants mapped to g, c, h, t
+
+## change mouse speed
+'''
+defaults write -g com.apple.mouse.scaling <int> (try 6 as a value)
+'''
+Restart for changes to take effect
